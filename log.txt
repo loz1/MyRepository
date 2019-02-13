@@ -1,0 +1,11 @@
+commit d728d6c90c02cea273043ea173527d1e1642d083 (HEAD -> master, origin/master)
+Author: loz1 <lozushka2.0@gmail.com>
+Date:   Wed Feb 13 17:44:46 2019 +0300
+
+    task1/status.txt
+
+commit d6461c56330bcdd026032f53058f4391ddea8c99
+Author: loz1 <lozushka2.0@gmail.com>
+Date:   Wed Feb 13 17:41:55 2019 +0300
+
+    add .gitignore
