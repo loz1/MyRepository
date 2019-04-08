@@ -1,9 +1,10 @@
-﻿console.log('work.getPhotoPosts(10,10, {author: \'Иванов Дима\'})');
+﻿
+console.log('work.getPhotoPosts(10,10, {author: \'Иванов Дима\'})');
 console.log('work.getPhotoPosts(10,10)');
 console.log('work.getPhotoPost(5)');
 console.log('work.removePhotoPost(12)');
-let work = (function () {
-    let photoPosts = [
+
+let photoPosts = [
       {
 
           id: '1',
@@ -267,12 +268,18 @@ let work = (function () {
        },
 
     ];
-    function getPhotoPosts(skip, amountToTake, filterConfig) {
-        if (skip >= 0 && amountToTake >= 0 && skip + amountToTake <= photoPosts.length) {
+
+class MyClass {
+    constructor(photoPosts = []) {
+        this._photoPosts = photoPosts;
+    }
+    getPhotoPosts(skip, amountToTake, filterConfig) 
+    {
+        if (skip >= 0 && amountToTake >= 0 && skip + amountToTake <= this._photoPosts.length) {
             let arrRes = [];
             let arr = [];
             for (let i = skip; i < skip + amountToTake; i++) {
-                arrRes.push(photoPosts[i]);
+                arrRes.push(this._photoPosts[i]);
             }
             arrRes.sort(function (a, b) {
                 return b.createdAt - a.createdAt;
@@ -292,14 +299,14 @@ let work = (function () {
             console.log('error, bad function parameters');
         }
     }
-    function getPhotoPost(id){
-        for (let i = 0; i < photoPosts.length; i++) {
-            if (photoPosts[i].id == id) {
-                return photoPosts[i];
+    getPhotoPost(id) {
+        for (let i = 0; i < this._photoPosts.length; i++) {
+            if (this._photoPosts[i].id == id) {
+                return this._photoPosts[i];
             }
         }
     }
-    function validatePhotoPost(photoPost) {
+    validatePhotoPost(photoPost) {
         let res = false;
         if (typeof photoPost.id == 'string'
             && typeof photoPost.descriprion == 'string'
@@ -310,15 +317,15 @@ let work = (function () {
         }
         return res;
     }
-    function addPhotoPost(photoPost) {
-        if (validatePhotoPost(photoPost)) {
-            photoPosts.push(photoPost);
+    addPhotoPost(photoPost) {
+        if (this.validatePhotoPost(photoPost)) {
+            this._photoPosts.push(photoPost);
             return true;
         } else {
             return false;
         }
     }
-    function editPhotoPost(id, photoPost) {
+    editPhotoPost(id, photoPost) {
         let forChanges = getPhotoPost(id);
         if (validatePhotoPost(forChanges)) {
             if (typeof photoPost.descriprion == 'string') {
@@ -336,10 +343,10 @@ let work = (function () {
         }
         return true;
     }
-    function removePhotoPost(id) {
+    removePhotoPost(id) {
         let ind = -1;
-        for (let i = 0; i < photoPosts.length; i++) {
-            if (photoPosts[i].id == id) {
+        for (let i = 0; i < this._photoPosts.length; i++) {
+            if (this._photoPosts[i].id == id) {
                 ind = i;
                 break;
             }
@@ -347,16 +354,15 @@ let work = (function () {
         if (ind == -1) {
             console.log('Error, bad id');
         } else {
-            photoPosts.splice(ind, 1);
+            this._photoPosts.splice(ind, 1);
         }
         return true;
     }
-    return {
-        getPhotoPosts,
-        getPhotoPost,
-        validatePhotoPost,
-        addPhotoPost,
-        editPhotoPost,
-        removePhotoPost,
     }
-})();
+
+let work = new MyClass();
+
+for (let i = 0; i < photoPosts.length; i++) {
+    work.addPhotoPost(photoPosts[i]);
+}
+
