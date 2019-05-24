@@ -3,13 +3,19 @@ console.log('work.getPhotoPosts(10,10, {author: \'Иванов Дима\'})');
 console.log('work.getPhotoPosts(10,10)');
 console.log('work.getPhotoPost(5)');
 console.log('work.removePhotoPost(12)');
+console.log('');
+console.log('view.removePost(0)');
+console.log('view.addPostFromConsole(5)');
+console.log('view.editPost(0, {description : \'Pika?\', photoLink : \'https://www.meme-arsenal.com/memes/deef02af6220f7d253f555e87d2583bf.jpg\'})');
+
+
 
 let photoPosts = [
       {
 
           id: '1',
 
-          descriprion: 'Хочешь научиться спорить – приходи в клуб дебатов БГУ ',
+          description: 'Хочешь научиться спорить – приходи в клуб дебатов БГУ ',
 
           createdAt: new Date('2018-02-20t23:00:00'),
 
@@ -22,11 +28,11 @@ let photoPosts = [
 
            id: '2',
 
-           descriprion: 'Четырнадцать китайских студентов БГУ награждены благодарностью Министерства образования Беларуси',
+           description: 'Четырнадцать китайских студентов БГУ награждены благодарностью Министерства образования Беларуси',
 
            createdAt: new Date('2018-02-19t23:00:00'),
 
-           author: 'Иванов Иван',
+           author: 'Иванов Дмитрий',
 
            photoLink: 'https://pp.userapi.com/c854216/v854216088/2fe8/jshmJ2dP4EQ.jpg'
 
@@ -35,7 +41,7 @@ let photoPosts = [
 
            id: '3',
 
-           descriprion: 'Не забудьте принять участие в общеуниверситетском on-line конкурсе “География БГУ”',
+           description: 'Не забудьте принять участие в общеуниверситетском on-line конкурсе “География БГУ”',
 
            createdAt: new Date('2018-02-18t23:00:00'),
 
@@ -48,7 +54,7 @@ let photoPosts = [
 
            id: '4',
 
-           descriprion: 'Первичная профсоюзная организация студентов БГУ проводит карьерный семинар-тренинг',
+           description: 'Первичная профсоюзная организация студентов БГУ проводит карьерный семинар-тренинг',
 
            createdAt: new Date('2018-02-17t23:00:00'),
 
@@ -61,7 +67,7 @@ let photoPosts = [
 
            id: '5',
 
-           descriprion: 'Расписание занятий для студентов БГУ стало доступным в один «клик»',
+           description: 'Расписание занятий для студентов БГУ стало доступным в один «клик»',
 
            createdAt: new Date('2018-02-16t23:00:00'),
 
@@ -74,7 +80,7 @@ let photoPosts = [
 
            id: '6',
 
-           descriprion: 'Тренинг для волонтеров II Европейских игр 2019',
+           description: 'Тренинг для волонтеров II Европейских игр 2019',
 
            createdAt: new Date('2018-02-15t23:00:00'),
 
@@ -88,7 +94,7 @@ let photoPosts = [
 
            id: '7',
 
-           descriprion: 'Чемпионат «Business Case Student Competition 2019» впервые пройдет в БГУ',
+           description: 'Чемпионат «Business Case Student Competition 2019» впервые пройдет в БГУ',
 
            createdAt: new Date('2018-02-01t23:00:00'),
 
@@ -101,7 +107,7 @@ let photoPosts = [
 
            id: '8',
 
-           descriprion: 'Фото с любимым университетом',
+           description: 'Фото с любимым университетом',
 
            createdAt: new Date('2018-02-02t23:00:00'),
 
@@ -114,7 +120,7 @@ let photoPosts = [
 
            id: '9',
 
-           descriprion: 'Международная научно-практическая конференция «Слова ў кантэксце часу» откроется в БГУ',
+           description: 'Международная научно-практическая конференция «Слова ў кантэксце часу» откроется в БГУ',
 
            createdAt: new Date('2018-02-03t23:00:00'),
 
@@ -127,7 +133,7 @@ let photoPosts = [
 
            id: '10',
 
-           descriprion: 'Золото Открытого первенства Московского района по гиревому спорту завоевала команда военного факультета БГУ',
+           description: 'Золото Открытого первенства Московского района по гиревому спорту завоевала команда военного факультета БГУ',
 
            createdAt: new Date('2018-02-04t23:00:00'),
 
@@ -140,7 +146,7 @@ let photoPosts = [
 
            id: '11',
 
-           descriprion: 'БГУ представит 18 научно-технических разработок на XV Петербургской технической ярмарке',
+           description: 'БГУ представит 18 научно-технических разработок на XV Петербургской технической ярмарке',
 
            createdAt: new Date('2018-02-05t23:00:00'),
 
@@ -153,7 +159,7 @@ let photoPosts = [
 
            id: '12',
 
-           descriprion: 'Делегация Посольства Республики Армения в Беларуси посетила БГУ',
+           description: 'Делегация Посольства Республики Армения в Беларуси посетила БГУ',
 
            createdAt: new Date('2018-02-06t23:00:00'),
 
@@ -166,7 +172,7 @@ let photoPosts = [
 
            id: '13',
 
-           descriprion: 'Кабинет греческой филологии в БГУ',
+           description: 'Кабинет греческой филологии в БГУ',
 
            createdAt: new Date('2018-02-07t23:00:00'),
 
@@ -179,7 +185,7 @@ let photoPosts = [
 
            id: '14',
 
-           descriprion: 'С БГУ всё становится возможным!',
+           description: 'С БГУ всё становится возможным!',
 
            createdAt: new Date('2018-02-08t23:00:00'),
 
@@ -192,7 +198,7 @@ let photoPosts = [
 
            id: '15',
 
-           descriprion: 'Открыт набор на участие в Моделировании ООН на Факультете международных отношений !',
+           description: 'Открыт набор на участие в Моделировании ООН на Факультете международных отношений !',
 
            createdAt: new Date('2018-02-09t23:00:00'),
 
@@ -205,7 +211,7 @@ let photoPosts = [
 
            id: '16',
 
-           descriprion: 'СНИЛ "ГИС-лаборатория" и HERE приглашают студентов к участию в HERE Community Challenge 2019!',
+           description: 'СНИЛ "ГИС-лаборатория" и HERE приглашают студентов к участию в HERE Community Challenge 2019!',
 
            createdAt: new Date('2018-02-10t23:00:00'),
 
@@ -218,7 +224,7 @@ let photoPosts = [
 
            id: '17',
 
-           descriprion: 'Неудача',
+           description: 'Неудача',
 
            createdAt: new Date('2018-02-11t23:00:00'),
 
@@ -231,7 +237,7 @@ let photoPosts = [
 
            id: '18',
 
-           descriprion: 'Что нужно человеку для счастья?',
+           description: 'Что нужно человеку для счастья?',
 
            createdAt: new Date('2018-02-12t23:00:00'),
 
@@ -244,7 +250,7 @@ let photoPosts = [
 
            id: '19',
 
-           descriprion: 'МАСТЕР-КЛАСС по видеорекаламе',
+           description: 'МАСТЕР-КЛАСС по видеорекаламе',
 
            createdAt: new Date('2018-02-13t23:00:00'),
 
@@ -257,7 +263,7 @@ let photoPosts = [
 
            id: '20',
 
-           descriprion: 'Уникальная возможность продолжить обучение во Франции!',
+           description: 'Уникальная возможность продолжить обучение во Франции!',
 
            createdAt: new Date('2018-02-14t23:00:00'),
 
@@ -269,7 +275,56 @@ let photoPosts = [
 
     ];
 
-class MyClass {
+class View {
+    constructor() {
+        this.model = document.getElementById('model').content.querySelector('.post');
+        this._photoPosts = document.getElementById('posts');
+        this._size = 0;
+    }
+    getPost(post){ //post from arr
+        const model = this.model.cloneNode(true); 
+        model.setAttribute('data-id', this._size);
+        //console.log(post.author) ;
+        model.querySelector('.info p').textContent = post.description; 
+        model.querySelector('.dateName p').textContent = post.author + '\n' 
+        + post.createdAt.getDate() + '/'+ post.createdAt.getMonth() + '/'+ post.createdAt.getFullYear();
+
+        model.querySelector('.photo img').setAttribute('src', post.photoLink); 
+        return model; 
+    }
+    addPost(post) { //post from arr
+        this._photoPosts.appendChild(this.getPost(post)); 
+        this._size++;
+    }
+    addPostFromConsole(id) {
+        this.addPost(photoPosts[id]);
+    }
+    removePost(id) {
+        this._photoPosts.querySelector('[data-id="' + id + '"]').remove();
+        let k = Number.parseInt(id);
+        for (let i = k + 1; i < this._size; i++) {
+            this._photoPosts.querySelector('[data-id="' + i + '"]').setAttribute('data-id', i - 1);
+        }
+        this._size--;
+    }
+    editPost(id, post) {
+        let forChanges = this._photoPosts.querySelector('[data-id="' + id + '"]');
+        
+        if (typeof post.description == 'string') {
+            forChanges.querySelector('.info p').textContent = post.description;
+        }
+        if (typeof post.photoLink == 'string') {
+            forChanges.querySelector('.photo img').setAttribute('src', post.photoLink); 
+        }
+        
+        return true;
+    }
+    
+}
+    
+   
+
+class PostModel {
     constructor(photoPosts = []) {
         this._photoPosts = photoPosts;
     }
@@ -309,7 +364,7 @@ class MyClass {
     validatePhotoPost(photoPost) {
         let res = false;
         if (typeof photoPost.id == 'string'
-            && typeof photoPost.descriprion == 'string'
+            && typeof photoPost.description == 'string'
             && typeof photoPost.createdAt == 'object'
             && typeof photoPost.author == 'string'
             && typeof photoPost.photoLink == 'string') {
@@ -328,8 +383,8 @@ class MyClass {
     editPhotoPost(id, photoPost) {
         let forChanges = getPhotoPost(id);
         if (validatePhotoPost(forChanges)) {
-            if (typeof photoPost.descriprion == 'string') {
-                forChanges.descriprion = photoPost.descriprion;
+            if (typeof photoPost.description == 'string') {
+                forChanges.description = photoPost.description;
             }
             if (typeof photoPost.createdAt == 'object') {
                 forChanges.createdAt = photoPost.createdAt;
@@ -360,9 +415,13 @@ class MyClass {
     }
     }
 
-let work = new MyClass();
-
+let work = new PostModel();
 for (let i = 0; i < photoPosts.length; i++) {
     work.addPhotoPost(photoPosts[i]);
 }
 
+let view = new View();
+
+for (let i = 0; i < photoPosts.length; i++) {
+    view.addPost(photoPosts[i]);
+}

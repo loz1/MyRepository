@@ -4,7 +4,7 @@
 		<meta charset = "UTF-8"/>
 		<title>title</title>
 		<link href = "style.css" rel = "stylesheet" type = "text/css"/>
-		<script src="index.js"></script>
+		
 	</head>
   <body> 
     <header>
@@ -25,141 +25,46 @@
     <button class = "buttons addPost"></button>
     
 
-
-
-
-    <div class = "post">
-      <div class = "photoAndHash">
-        <div class = "photo">
-          <div class = "check">
-              <img src="images/logan.jpg" alt="photo">
-          </div>
-        </div>
-        <div class = "post-item hashtags">
-          <span>some hashtags: #sd f  fdg  sdf g sdfg dsf g  
-          sadfasd f  sad f sd f as  fd af sdf  asdf </span>
-        </div>
-      </div>
-      <div class = "infoAndDateName">
-        <div class = "post-item info">
-          <span>
-              some description sd f  fdg  sdf g sdfg dsf g  
-              sadfasd f  sad f sd f as  fd af sdf  asdf 
-          </span>
-        </div>
-        <div class = "post-item dateName">
-          Ivan Ivanov 08/08/2019 13:03:12
-        </div>
-      </div>
-      <div class = "buttonsBlock">
-        <button class = " buttons delete"></button>
-        <button class = "buttons edit"></button>
-        <button class = "buttons like"></button>
-        <p class = "likeAmount">999 likes</p>
-      </div>
+    
+    <div id = "posts">
+      <template id = "model">
+          <div class = "post" data-id="">
+            <div class = "photoAndHash">
+              <div class = "photo">
+                <div class = "check">
+                    <img src= "images/pewdiepie.jpg" alt="photo">
+                </div>
+              </div>
+              <div class = "post-item hashtags">
+                <span>
+                  some hashtags: #sd f  fdg  sdf g sdfg dsf g  
+                  sadfasd f  sad f sd f as  fd af sdf  asdf
+               </span>
+              </div>
+            </div>
+            <div class = "infoAndDateName">
+              <div class = "post-item info">
+                <p>
+                  some description sd f  fdg  sdf g sdfg dsf g  
+                  sadfasd f  sad f sd f as  fd af sdf  asdf 
+                </p>
+              </div>
+              <div class = "post-item dateName"> 
+                <p>
+                  Ivan Ivanov 08/08/2019 13:03:18
+                </p>
+              </div>
+            </div>
+            <div class = "buttonsBlock">
+              <button class = " buttons delete"></button>
+              <button class = "buttons edit"></button>
+              <button class = "buttons like"></button>
+              <p class = "likeAmount">999 likes</p>
+            </div>
+          
+      </template>
     </div>
 
-
-
-
-    <div class = "post">
-      <div class = "photoAndHash">
-        <div class = "photo">
-          <div class = "check">
-              <img src="images/a_t.jpg" alt="photo">
-          </div>
-        </div>
-        <div class = "post-item hashtags">
-          <span>some hashtags: #sd f  fdg  sdf g sdfg dsf g  
-          sadfasd f  sad f sd f as  fd af sdf  asdf </span>
-        </div>
-      </div>
-      <div class = "infoAndDateName">
-        <div class = "post-item info">
-          <span>
-              some description sd f  fdg  sdf g sdfg dsf g  
-              sadfasd f  sad f sd f as  fd af sdf  asdf 
-          </span>
-        </div>
-        <div class = "post-item dateName">
-          Ivan Ivanov 08/08/2019 13:03:18
-        </div>
-      </div>
-      <div class = "buttonsBlock">
-        <button class = " buttons delete"></button>
-        <button class = "buttons edit"></button>
-        <button class = "buttons like"></button>
-        <p class = "likeAmount">999 likes</p>
-      </div>
-    </div>
-
-
-
-
-    <div class = "post">
-      <div class = "photoAndHash">
-        <div class = "photo">
-          <div class = "check">
-              <img src="images/got.JPG" alt="photo">
-          </div>
-        </div>
-        <div class = "post-item hashtags">
-          <span>some hashtags: #sd f  fdg  sdf g sdfg dsf g  
-          sadfasd f  sad f sd f as  fd af sdf  asdf 
-          </span>
-        </div>
-      </div>
-      <div class = "infoAndDateName">
-        <div class = "post-item info">
-          <span>
-              some description sd f  fdg  sdf g sdfg dsf g  
-              sadfasd f  sad f sd f as  fd af sdf  asdf  dsf sdf  sdf]s
-            sdf sdf sd fsdf
-          </span>
-        </div>
-        <div class = "post-item dateName">
-          Ivan Ivanov 08/08/2019 13:03:18
-        </div>
-      </div>
-      <div class = "buttonsBlock">
-        <button class = " buttons delete"></button>
-        <button class = "buttons edit"></button>
-        <button class = "buttons like"></button>
-        <p class = "likeAmount">999 likes</p>
-      </div>
-    </div>
-
-
-    <div class = "post">
-      <div class = "photoAndHash">
-        <div class = "photo">
-          <div class = "check">
-              <img src= "images/pewdiepie.jpg" alt="photo">
-          </div>
-        </div>
-        <div class = "post-item hashtags">
-          <span>some hashtags: #sd f  fdg  sdf g sdfg dsf g  
-          sadfasd f  sad f sd f as  fd af sdf  asdf </span>
-        </div>
-      </div>
-      <div class = "infoAndDateName">
-        <div class = "post-item info">
-          <span>
-              some description sd f  fdg  sdf g sdfg dsf g  
-              sadfasd f  sad f sd f as  fd af sdf  asdf 
-          </span>
-        </div>
-        <div class = "post-item dateName">
-          Ivan Ivanov 08/08/2019 13:03:18
-        </div>
-      </div>
-      <div class = "buttonsBlock">
-        <button class = " buttons delete"></button>
-        <button class = "buttons edit"></button>
-        <button class = "buttons like"></button>
-        <p class = "likeAmount">999 likes</p>
-      </div>
-    </div>
 
     <button class = "buttons getNextPosts"></button>
     <footer>
@@ -168,5 +73,9 @@
       <p class = "footerInfo">project: PlanetExpressYourselfFreely</p>   
       <p class = "footerInfo">12/03/19</p>   
     </footer>
+
+    <script src="index.js"></script>
+
   </body>
+  
 </html>
